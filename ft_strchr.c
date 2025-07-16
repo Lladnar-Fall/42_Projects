@@ -6,7 +6,7 @@
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 12:52:13 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/16 14:59:28 by rlutucir         ###   ########.fr       */
+/*   Updated: 2025/07/16 16:01:30 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (s)
+	while (s[i])
 	{
 		if (s[i] == c)
 			return ((char *)(s + i));
