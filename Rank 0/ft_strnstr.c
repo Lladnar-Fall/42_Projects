@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 09:55:59 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/16 12:56:56 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:56:33 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:56:41 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     const char *text = "Hello, world!";
-//     const char *search1 = "world";
-
-//     char *ans = ft_strnstr(text, search1, 12);
-//     printf("%s", ans);
-// }

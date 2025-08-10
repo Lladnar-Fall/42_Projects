@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 14:19:36 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/21 14:21:01 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:57:53 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:58:19 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[len] = '\0';
 	return (str);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char *str = "hello, world";
-// 	char *ans = ft_substr(str, 0, ft_strlen(str));
-// 	printf("%s", ans);
-// 	free(ans);
-// }

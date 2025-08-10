@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 12:52:13 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/16 17:17:45 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:52:23 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:52:36 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,13 @@ char	*ft_strchr(const char *s, int c)
 
 	d = (char)c;
 	i = 0;
-	while (1)
+	while (s[i])
 	{
 		if (s[i] == d)
 			return ((char *)s + i);
-		if (s[i] == '\0')
-			return (NULL);
 		i++;
 	}
+	if (d == '\0')
+		return ((char *)s + i);
 	return (NULL);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	const char *word = "hello";
-// 	char *ans = ft_strchr(word, 101);
-// 	printf("%c", *ans);
-// }

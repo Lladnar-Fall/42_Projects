@@ -5,35 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 14:22:16 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/23 11:57:45 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:51:54 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 10:09:41 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_words(char const *s, char c);
-int		words_len(char const *s, char c);
-char	**split_words(char **str, char const *s, char c);
-void	free_it(char **s, int i);
-
-char	**ft_split(char const *s, char c)
+static	void	free_it(char **s, int i)
 {
-	char	**str;
-	size_t	len;
-
-	if (!s)
-		return (NULL);
-	len = count_words(s, c);
-	str = (char **)malloc(sizeof(char *) * (len + 1));
-	if (!str)
-		return (NULL);
-	if (!split_words(str, s, c))
-		return (NULL);
-	return (str);
+	while (i--)
+		free(s[i]);
+	free(s);
 }
 
-char	**split_words(char **str, char const *s, char c)
+static int	words_len(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (*s && *s == c)
+		s++;
+	while (*s && *s != c)
+	{
+		i++;
+		s++;
+	}
+	return (i);
+}
+
+static char	**split_words(char **str, char const *s, char c)
 {
 	size_t	i;
 	size_t	len;
@@ -62,14 +63,7 @@ char	**split_words(char **str, char const *s, char c)
 	return (str);
 }
 
-void	free_it(char **s, int i)
-{
-	while (i--)
-		free(s[i]);
-	free(s);
-}
-
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	counter;
@@ -92,58 +86,18 @@ int	count_words(char const *s, char c)
 	return (i);
 }
 
-int	words_len(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int	i;
+	char	**str;
+	size_t	len;
 
-	i = 0;
-	while (*s && *s == c)
-		s++;
-	while (*s && *s != c)
-	{
-		i++;
-		s++;
-	}
-	return (i);
+	if (!s)
+		return (NULL);
+	len = count_words(s, c);
+	str = (char **)malloc(sizeof(char *) * (len + 1));
+	if (!str)
+		return (NULL);
+	if (!split_words(str, s, c))
+		return (NULL);
+	return (str);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char *word = " hello world  and ";
-// 	char sep = ' ';
-// 	char **ans = ft_split(word, sep);
-// 	int i = 0;
-// 	while (ans[i])
-// 	{
-// 		printf("%s\n", ans[i]);
-// 		i++;
-// 	}
-// 	free_it(ans, i);
-// }
-
-// int	count_words(char const *s, char c)
-// {
-// 	int	counter;
-
-// 	counter = 0;
-// 	while (*s)
-// 	{
-// 		if (*s != c)
-// 		{
-// 			counter++;
-// 			while (*s && *s != c )
-// 				s++;
-// 			if (*s == '\0')
-// 				return (counter);
-// 		}
-// 		else
-// 		{
-// 			while(*s && *s == c )
-// 				s++;
-// 			if (*s == '\0')
-// 				return (counter);
-// 		}
-// 	}
-// 	return (counter);
-// }

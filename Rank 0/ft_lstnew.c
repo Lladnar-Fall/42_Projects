@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 14:22:53 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/25 15:32:45 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:45:29 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:45:38 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *node;
+	t_list	*node;
 
 	node = malloc(sizeof(t_list));
 	if (!node)

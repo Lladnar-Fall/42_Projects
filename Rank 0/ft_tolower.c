@@ -5,12 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 15:47:40 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/14 16:51:09 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:58:31 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 10:22:48 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_tolower(int c)
 {
@@ -18,8 +16,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-
-/* int main()
-{
-	printf("%c", ft_tolower('A'));
-} */

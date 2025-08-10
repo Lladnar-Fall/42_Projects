@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 17:56:15 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/23 14:16:00 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:47:46 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 10:10:11 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*str;
-	size_t			i;
+	unsigned char		*str;
+	size_t				i;
 
 	i = 0;
 	str = (unsigned char *)b;
@@ -26,11 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-// int	main()
-// {
-// 	char str[50] = "This is to test if it works or not.";
-// 	char *s = ft_memset(str +  5, '8', 8*sizeof(char));
-// 	printf("%s\n", s);
-// }

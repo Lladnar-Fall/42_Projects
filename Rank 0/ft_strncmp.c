@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/15 16:53:04 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/18 11:44:04 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:56:08 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:56:21 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (str1[i] - str2[i]);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char word1[] = "hel1o";
-// 	char word2[] = "hello";
-// 	printf("%d", strncmp(word1, word2, 5));
-// }

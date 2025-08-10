@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/23 16:24:56 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/23 17:00:06 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:55:50 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:55:58 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	int		len;
 
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)

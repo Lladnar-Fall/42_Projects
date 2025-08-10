@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 10:12:55 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/21 14:16:13 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:50:44 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:51:20 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 }

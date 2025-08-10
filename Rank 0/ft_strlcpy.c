@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/15 11:45:10 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/17 16:48:14 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/08/06 09:55:05 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/08/06 09:55:14 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char buffer[10];
-// 	unsigned int len = ft_strlcpy(buffer, "Hello, world", sizeof(buffer));
-// 	printf("%d\n", len);
-// }
