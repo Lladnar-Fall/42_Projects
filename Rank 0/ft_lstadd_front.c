@@ -1,44 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/15 15:25:37 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/16 10:53:04 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/07/25 11:41:36 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/07/25 15:32:51 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (dst[j] != '\0')
-		j++;
-	while (i < size)
-	{
-		dst[j] = src[i];
-		j++;
-		i++;
-	}
-	dst[j] = '\0';
-	return (j);
-}
-
-// #include <string.h>
-#include <stdio.h>
-
-int main()
-{
-	char word1[] = "please";
-	char word2[] = " connect";
-
-	printf("%lu\n", strlcat(word1, word2, sizeof(word1)));
-	printf("%s", word1);
+	new->next = *lst;
+	*lst = new;
 }

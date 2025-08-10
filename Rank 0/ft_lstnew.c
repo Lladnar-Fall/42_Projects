@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 14:18:40 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/16 10:47:12 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/07/24 14:22:53 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/07/25 15:32:45 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
+t_list	*ft_lstnew(void *content)
+{
+	t_list *node;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-size_t	ft_strlen(const char *s);
-int		ft_isalnum(int c);
-
-#endif
+	node = malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
+}

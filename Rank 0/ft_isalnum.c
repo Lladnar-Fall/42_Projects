@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlutucir <rlutucir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/15 11:45:10 by rlutucir          #+#    #+#             */
-/*   Updated: 2025/07/16 14:09:44 by rlutucir         ###   ########.fr       */
+/*   Created: 2025/07/14 14:31:55 by rlutucir          #+#    #+#             */
+/*   Updated: 2025/07/17 11:16:21 by rlutucir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_isalnum(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	i = 0;
-	while (src[i])
-		i++;
-	return (i);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }
 
 // #include <stdio.h>
-// #include <string.h>
 // int main()
 // {
-// 	char buffer[10];
-// 	unsigned int len = ft_strlcpy(buffer, "Hello, world", sizeof(buffer));
-// 	printf("%d\n", len);
+// 	printf("%d",ft_isalnum('c'));
 // }
